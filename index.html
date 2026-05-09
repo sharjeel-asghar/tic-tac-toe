@@ -1,11 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="./script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css?family=Outfit:100,200,300,regular,500,600,700,800,900"
+    rel="stylesheet" />
 </head>
+
 <body>
-  
+  <main>
+    <section class="start-game  active">
+      <div class="container">
+        <div class="content-wrapper">
+          <div class="logo">
+            <img src="./images/logo.svg" alt="">
+          </div>
+          <div class="select-mark">
+            <h3>Pick player 1's mark</h3>
+            <div class="marks-buttons">
+              <button class="selection-btn selected  X-btn">
+                X
+              </button>
+              <button class="selection-btn  O-btn">
+                O
+              </button>
+            </div>
+            <p class="selected-mark">You CHOSE <span class="mark">X</span> .</p>
+          </div>
+          <button class="new-game-btn cpu">NEW GAME (VS CPU)</button>
+          <button class="new-game-btn player">NEW GAME (VS PLAYER)</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="playing-game ">
+      <div class="container">
+        <div class="content-wrapper ">
+          <div class="head-div">
+            <img src="./images/logo.svg"  class="logo-icon" alt="">
+            <div class="current-turn">
+              <img src="./images/icon-o.svg"  alt="">
+              <span>TURN</span>
+            </div>
+            <button class="reset">
+              <img src="./images/icon-restart.svg" alt="">
+            </button>
+          </div>
+          <div class="game-grid">
+            <button class="box" ></button>
+            <button class="box" ></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+          </div>
+          <div class="secondary-container">
+            <div class="first-player-win counts">
+              <p class="player-name">X(Player 1)</p>
+              <span class="number-of">0</span>
+            </div>
+            <div class="ties counts">
+              <p class="player-name">TIES</p>
+              <span class="number-of">0</span>
+            </div>
+            <div class="second-player-win counts">
+              <p class="player-name">O (Player 2)</p>
+              <span class="number-of">0</span>
+            </div>
+          </div>
+          <button class="quit-btn">Quit</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="result-window">
+      <h4 class="result-text">OH NO, YOU LOST...</h4>
+      <p class="wining-player-text">
+        <span class="wining-Mark">X</span> Takes the round
+      </p>
+      <div class="end-window-buttons">
+        <button class="quit-btn">QUIT</button>
+        <button class="next-round-btn">NEXT ROUND</button>
+      </div>
+    </section>
+    <div class="overlay">
+
+    </div>
+  </main>
 </body>
+
 </html>
